@@ -1,6 +1,6 @@
 <%@ page import="java.util.Collection" %>
-<%@ page import="com.example.javalab1.ui.ItemInfo" %>
-<%@ page import="com.example.javalab1.bo.ItemHandler" %>
+<%@ page import="ui.ItemInfo" %>
+<%@ page import="bo.ItemHandler" %>
 <%@ page import="java.util.Iterator" %><%--
   Created by IntelliJ IDEA.
   User: albin

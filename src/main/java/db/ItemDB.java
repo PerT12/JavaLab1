@@ -1,4 +1,6 @@
-package com.example.javalab1.db;
+package db;
+
+import bo.Item;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -7,7 +9,7 @@ import java.sql.Statement;
 import java.util.Collection;
 import java.util.Vector;
 
-public class ItemDB extends com.example.javalab1.bo.Item {
+public class ItemDB extends Item {
 
     public static Collection searchItems(String itemGroup) {
         Vector v = new Vector<>();

@@ -1,4 +1,4 @@
-package com.example.javalab1.db;
+package db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

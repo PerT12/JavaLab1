@@ -1,4 +1,4 @@
-package com.example.javalab1.ui;
+package ui;
 
 public class ItemInfo {
 

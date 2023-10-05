@@ -1,6 +1,6 @@
-package com.example.javalab1.bo;
+package bo;
 
-import com.example.javalab1.db.ItemDB;
+import db.ItemDB;
 import java.util.Collection;
 
 public class Item {

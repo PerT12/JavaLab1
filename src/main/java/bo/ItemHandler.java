@@ -1,6 +1,6 @@
-package com.example.javalab1.bo;
+package bo;
 
-import com.example.javalab1.ui.ItemInfo;
+import ui.ItemInfo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
