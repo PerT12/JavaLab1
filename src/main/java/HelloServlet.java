@@ -1,5 +1,3 @@
-package com.example.javalab1;
-
 import java.io.*;
 
 import jakarta.servlet.http.*;
@@ -10,7 +8,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Java Lab 1!";
+        message = "DB Test";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
