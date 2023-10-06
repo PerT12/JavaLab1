@@ -16,13 +16,13 @@ public class ItemDB extends Item {
         try {
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select id, name, description from item");
+            ResultSet rs = st.executeQuery("SELECT * FROM itemsdb.item");
 
             while(rs.next()) {
-                int i = rs.getInt("id");
+                int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String description = rs.getString("description");
-                v.addElement(new ItemDB(i, name, description));
+                v.addElement(new ItemDB(id, name, description));
             }
         } catch(SQLException e) {
             e.printStackTrace();
