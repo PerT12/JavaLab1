@@ -16,7 +16,7 @@ public class ItemDB extends Item {
         try {
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select id, name, description from itemsdb");
+            ResultSet rs = st.executeQuery("select id, name, description from item");
 
             while(rs.next()) {
                 int i = rs.getInt("id");
