@@ -6,13 +6,14 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Vector;
+import java.util.List;
 
 public class ItemDB extends Item {
 
     public static Collection searchItems(String itemGroup) {
-        Vector v = new Vector<>();
+        List<Item> items = new ArrayList<>();
         try {
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
@@ -22,12 +23,12 @@ public class ItemDB extends Item {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String description = rs.getString("description");
-                v.addElement(new ItemDB(id, name, description));
+                items.add(new ItemDB(id, name, description));
             }
         } catch(SQLException e) {
             e.printStackTrace();
         }
-        return v;
+        return items;
     }
 
     private ItemDB(int id, String name, String description) {
