@@ -16,9 +16,10 @@ public class DBManager {
     }
 
     private DBManager() {
+        String server = "jdbc:mysql://localhost:3306/";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/itemsdb?user=root&password=");
+            con = DriverManager.getConnection(server, "root", "");
         } catch(Exception e) {
             e.printStackTrace();
         }

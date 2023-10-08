@@ -18,8 +18,9 @@
     Iterator<ItemInfo> it = items.iterator();
     for( ; it.hasNext() ; ) {
         ItemInfo item = it.next();%>
-    <%= item.getName()%> :
-    <%= item.getDescription()%><br>
+    Id: <%= item.getId()%><br>
+    Item name: <%= item.getName()%><br>
+    Item description: <%= item.getDescription()%><br><br>
 <%  }%>
 </body>
 </html>
