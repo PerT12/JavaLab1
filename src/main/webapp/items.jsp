@@ -18,9 +18,10 @@
     Iterator<ItemInfo> it = items.iterator();
     for( ; it.hasNext() ; ) {
         ItemInfo item = it.next();%>
+    <button type="button">Add to shopping cart</button><br>
     Id: <%= item.getId()%><br>
-    Item name: <%= item.getName()%><br>
-    Item description: <%= item.getDescription()%><br>
+    Name: <%= item.getName()%><br>
+    Description: <%= item.getDescription()%><br>
     Price: <%= item.getPrice()%> USD<br><br>
 <%  }%>
 </body>
