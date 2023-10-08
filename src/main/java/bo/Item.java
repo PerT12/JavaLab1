@@ -10,8 +10,8 @@ public class Item {
     private String description;
     private double price;
 
-    static public Collection searchItems(String group) {
-        return ItemDB.searchItems(group);
+    static public Collection getItems() {
+        return ItemDB.getItems();
     }
 
     protected Item(int id, String name, String description, double price) {

@@ -7,8 +7,8 @@ import java.util.Iterator;
 
 public class ItemHandler {
 
-    public static Collection<ItemInfo> getItemsWithGroup(String s) {
-        Collection c = Item.searchItems(s);
+    public static Collection<ItemInfo> getItems() {
+        Collection c = Item.getItems();
         ArrayList<ItemInfo> items = new ArrayList<>();
         for(Iterator it = c .iterator(); it.hasNext();) {
             Item item = (Item) it.next();

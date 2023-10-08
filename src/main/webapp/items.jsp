@@ -14,7 +14,7 @@
     <title>DB Test</title>
 </head>
 <body>
-<% Collection<ItemInfo> items = ItemHandler.getItemsWithGroup("items");
+<% Collection<ItemInfo> items = ItemHandler.getItems();
     Iterator<ItemInfo> it = items.iterator();
     for( ; it.hasNext() ; ) {
         ItemInfo item = it.next();%>
