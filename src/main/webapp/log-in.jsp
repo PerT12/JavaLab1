@@ -5,7 +5,7 @@
     <title>Log in</title>
 </head>
 <body>
-<form action="store-page.jsp">
+<form action="index.jsp">
     Username : <input type="text" name="username" />
     <br/><br/>
     Password : <input type="text" name="password" />

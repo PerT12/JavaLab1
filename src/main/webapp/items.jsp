@@ -21,6 +21,9 @@
     Id: <%= item.getId()%><br>
     Item name: <%= item.getName()%><br>
     Item description: <%= item.getDescription()%><br><br>
+
 <%  }%>
+
+
 </body>
 </html>
