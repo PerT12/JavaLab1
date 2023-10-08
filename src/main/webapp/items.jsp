@@ -1,4 +1,3 @@
-<%@ page import="java.util.Collection" %>
 <%@ page import="ui.ItemInfo" %>
 <%@ page import="bo.ItemHandler" %>
 <%@ page import="java.util.Iterator" %>
