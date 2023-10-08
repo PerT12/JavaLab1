@@ -13,7 +13,8 @@ Welcome ${param.username}
 <%
     String user = request.getParameter("username");
     String pass = request.getParameter("password");
-    UserDB.addUser(user, pass);
+    if(UserDB.searchUser(user, pass) == null) UserDB.addUser(user, pass);
+
 %>
 
 <br/>
