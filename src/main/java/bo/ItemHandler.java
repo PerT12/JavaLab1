@@ -9,10 +9,10 @@ public class ItemHandler {
 
     public static Collection<ItemInfo> getItemsWithGroup(String s) {
         Collection c = Item.searchItems(s);
-        ArrayList<ItemInfo> items = new ArrayList<ItemInfo>();
+        ArrayList<ItemInfo> items = new ArrayList<>();
         for(Iterator it = c .iterator(); it.hasNext();) {
             Item item = (Item) it.next();
-            items.add(new ItemInfo(item.getId(), item.getName(), item.getDescription()));
+            items.add(new ItemInfo(item.getId(), item.getName(), item.getDescription(), item.getPrice()));
         }
         return items;
     }

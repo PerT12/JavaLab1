@@ -20,7 +20,8 @@
         ItemInfo item = it.next();%>
     Id: <%= item.getId()%><br>
     Item name: <%= item.getName()%><br>
-    Item description: <%= item.getDescription()%><br><br>
+    Item description: <%= item.getDescription()%><br>
+    Price: <%= item.getPrice()%> USD<br><br>
 <%  }%>
 </body>
 </html>

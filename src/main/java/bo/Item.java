@@ -8,15 +8,17 @@ public class Item {
     private int id;
     private String name;
     private String description;
+    private double price;
 
     static public Collection searchItems(String group) {
         return ItemDB.searchItems(group);
     }
 
-    protected Item(int id, String name, String description) {
+    protected Item(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.price = price;
     }
 
     public int getId() {
@@ -41,5 +43,13 @@ public class Item {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
