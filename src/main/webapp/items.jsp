@@ -6,7 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>DB Test</title>
+    <title>Items</title>
 </head>
 <body>
 <% List<ItemInfo> items = ItemHandler.getAllItems();

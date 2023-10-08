@@ -5,8 +5,8 @@
     <title>DB Test</title>
 </head>
 <body>
-<h1><%= "SQL Database" %>
-    <a href="items.jsp">DB</a>
+<h1><%= "Web Shop" %>
+    <a href="items.jsp">Items</a>
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
