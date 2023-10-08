@@ -14,13 +14,15 @@
     <title>DB Test</title>
 </head>
 <body>
-<% Collection<ItemInfo> items = ItemHandler.getItemsWithGroup("items");
+<% Collection<ItemInfo> items = ItemHandler.getItems();
     Iterator<ItemInfo> it = items.iterator();
     for( ; it.hasNext() ; ) {
         ItemInfo item = it.next();%>
     Id: <%= item.getId()%><br>
     Item name: <%= item.getName()%><br>
-    Item description: <%= item.getDescription()%><br><br>
+
+    Item description: <%= item.getDescription()%><br>
+    Price: <%= item.getPrice()%> USD<br><br>
 
 <%  }%>
 

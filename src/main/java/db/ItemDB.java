@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ItemDB extends Item {
 
-    public static Collection searchItems(String itemGroup) {
+    public static Collection getItems() {
         List<Item> items = new ArrayList<>();
         try {
             Connection con = DBManager.getConnection();
@@ -23,7 +23,8 @@ public class ItemDB extends Item {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String description = rs.getString("description");
-                items.add(new ItemDB(id, name, description));
+                double price = rs.getDouble("price");
+                items.add(new ItemDB(id, name, description, price));
             }
         } catch(SQLException e) {
             e.printStackTrace();
@@ -31,7 +32,7 @@ public class ItemDB extends Item {
         return items;
     }
 
-    private ItemDB(int id, String name, String description) {
-        super(id, name, description);
+    private ItemDB(int id, String name, String description, double price) {
+        super(id, name, description, price);
     }
 }

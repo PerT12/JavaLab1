@@ -19,7 +19,7 @@ public class DBManager {
         String server = "jdbc:mysql://localhost:3306/";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            con = DriverManager.getConnection(server, "root", "");
+            con = DriverManager.getConnection(server, "root", "test1234");
         } catch(Exception e) {
             e.printStackTrace();
         }
