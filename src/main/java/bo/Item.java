@@ -1,7 +1,7 @@
 package bo;
 
 import db.ItemDB;
-import java.util.Collection;
+import java.util.List;
 
 public class Item {
 
@@ -10,8 +10,8 @@ public class Item {
     private String description;
     private double price;
 
-    static public Collection getItems() {
-        return ItemDB.getItems();
+    static public List<Item> getAllItems() {
+        return ItemDB.getAllItems();
     }
 
     protected Item(int id, String name, String description, double price) {

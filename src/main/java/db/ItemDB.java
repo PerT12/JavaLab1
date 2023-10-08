@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ItemDB extends Item {
 
-    public static Collection getItems() {
+    public static List<Item> getAllItems() {
         List<Item> items = new ArrayList<>();
         try {
             Connection con = DBManager.getConnection();
