@@ -1,27 +1,31 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
+import bo.Item;
+import bo.UserHandler;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import ui.ItemInfo;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet("/HelloServlet")
 public class HelloServlet extends HttpServlet {
-    private String message;
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession();
+        String a = request.getParameter("dataToAdd");
+        System.out.println(a);
+        List<ItemInfo> shoppingCart = (List<ItemInfo>) session.getAttribute("cart");
+        if (shoppingCart == null) {
+            shoppingCart = new ArrayList<>();
+        }
 
-    public void init() {
-        message = "DB Test";
-    }
+        // Lägg till objekt i sessionsvariabeln (i detta fall en sträng)
+        shoppingCart.add(new ItemInfo(21, "name", "blue", 21));
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        // Spara den uppdaterade sessionsvariabeln
+        session.setAttribute("cart", shoppingCart);
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
-    }
-
-    public void destroy() {
-
+        // Gå tillbaka till en annan sida eller svara med ett meddelande
+        response.sendRedirect("log-in.jsp");
     }
 }

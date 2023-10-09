@@ -14,18 +14,36 @@
     <title>DB Test</title>
 </head>
 <body>
-<% Collection<ItemInfo> items = ItemHandler.getItems();
+<%
+    Collection<ItemInfo> items = ItemHandler.getItems();
     Iterator<ItemInfo> it = items.iterator();
-    for( ; it.hasNext() ; ) {
-        ItemInfo item = it.next();%>
-    Id: <%= item.getId()%><br>
-    Item name: <%= item.getName()%><br>
+    while (it.hasNext()) {
+        ItemInfo item = it.next();
+%>
+Id: <%= item.getId() %><br>
+Item name: <%= item.getName() %><br>
+Item description: <%= item.getDescription() %><br>
+Price: <%= item.getPrice() %> USD<br>
+<form action="HelloServlet" method="POST">
 
-    Item description: <%= item.getDescription()%><br>
-    Price: <%= item.getPrice()%> USD<br><br>
+    <input type="hidden" name="dataToAdd" value="<%= item.getName() %>">
+    <p>Item name: <%= item.getName() %></p>
+    <button type="submit">Lägg till i session</button>
+</form>
 
-<%  }%>
+<%
+    }
+%>
+<script>
+    function callCart() {
 
-
+    }
+</script>
 </body>
 </html>
+
+
+
+
+
+

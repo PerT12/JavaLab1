@@ -12,6 +12,10 @@
 </h1>
 Welcome ${param.username}
 <%
+    String message = (String) request.getAttribute("message");
+    out.println("<p>" + message + "</p>");
+%>
+<%
     UserHandler.logIn(request.getParameter("username"), request.getParameter("password"));
 %>
 
