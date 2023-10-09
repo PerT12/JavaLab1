@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="HelloServlet" method="POST">
+<form action="Servlet" method="POST">
     <input type="text" name="dataToAdd" placeholder="Skriv in text">
     <button type="submit">Lägg till i session</button>
 </form>

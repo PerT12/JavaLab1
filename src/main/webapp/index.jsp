@@ -19,6 +19,6 @@ Welcome ${param.username}
 %>
 
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="servlet">Servlet</a>
 </body>
 </html>
