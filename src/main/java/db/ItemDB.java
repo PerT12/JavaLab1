@@ -11,7 +11,6 @@ import java.util.Collection;
 import java.util.List;
 
 public class ItemDB extends Item {
-
     public static Collection getItems() {
         List<Item> items = new ArrayList<>();
         try {

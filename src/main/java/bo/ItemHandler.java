@@ -7,7 +7,6 @@ import java.util.Iterator;
 
 public class ItemHandler {
 
-
     public static Collection<ItemInfo> getItems() {
         Collection c = Item.getItems();
         ArrayList<ItemInfo> items = new ArrayList<>();

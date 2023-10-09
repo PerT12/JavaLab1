@@ -1,12 +1,7 @@
 package db;
 
-import bo.Item;
 import bo.User;
-
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public class UserDB {
     public static User searchUser(String username, String password) {
