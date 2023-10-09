@@ -1,4 +1,5 @@
 <%@ page import="db.UserDB" %>
+<%@ page import="bo.UserHandler" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -11,10 +12,7 @@
 </h1>
 Welcome ${param.username}
 <%
-    String user = request.getParameter("username");
-    String pass = request.getParameter("password");
-    if(UserDB.searchUser(user, pass) == null) UserDB.addUser(user, pass);
-
+    UserHandler.logIn(request.getParameter("username"), request.getParameter("password"));
 %>
 
 <br/>

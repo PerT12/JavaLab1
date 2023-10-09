@@ -28,4 +28,5 @@ public class DBManager {
     public static Connection getConnection() {
         return getInstance().con;
     }
+
 }
