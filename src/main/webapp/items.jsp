@@ -22,8 +22,7 @@ Price: <%= item.getPrice() %> USD<br>
 
 <form action="Servlet" method="POST">
     <input type="hidden" name="dataToAdd" value="<%= item.getName() %>">
-    <p>Item name: <%= item.getName() %></p>
-    <button type="submit">Lägg till i session</button>
+    <button type="submit">Add to shopping cart</button>
 </form>
 
 <%
