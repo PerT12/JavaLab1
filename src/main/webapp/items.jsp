@@ -1,7 +1,9 @@
 <%@ page import="java.util.Collection" %>
 <%@ page import="ui.ItemInfo" %>
 <%@ page import="bo.ItemHandler" %>
-<%@ page import="java.util.Iterator" %><%--
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: albin
   Date: 04/10/2023
@@ -25,7 +27,6 @@ Item name: <%= item.getName() %><br>
 Item description: <%= item.getDescription() %><br>
 Price: <%= item.getPrice() %> USD<br>
 <form action="HelloServlet" method="POST">
-
     <input type="hidden" name="dataToAdd" value="<%= item.getName() %>">
     <p>Item name: <%= item.getName() %></p>
     <button type="submit">Lägg till i session</button>
@@ -34,11 +35,10 @@ Price: <%= item.getPrice() %> USD<br>
 <%
     }
 %>
-<script>
-    function callCart() {
-
-    }
-</script>
+<%List<String> shoppingCart = (List<String>) session.getAttribute("cart");
+    for (String element : shoppingCart) {
+        out.println(element +"\n");
+    }%>
 </body>
 </html>
 

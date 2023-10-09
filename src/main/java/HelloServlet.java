@@ -14,18 +14,17 @@ public class HelloServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String a = request.getParameter("dataToAdd");
         System.out.println(a);
-        List<ItemInfo> shoppingCart = (List<ItemInfo>) session.getAttribute("cart");
+        List<String> shoppingCart = (List<String>) session.getAttribute("cart");
         if (shoppingCart == null) {
             shoppingCart = new ArrayList<>();
         }
+        shoppingCart.add(a);
 
-        // Lägg till objekt i sessionsvariabeln (i detta fall en sträng)
-        shoppingCart.add(new ItemInfo(21, "name", "blue", 21));
-
-        // Spara den uppdaterade sessionsvariabeln
         session.setAttribute("cart", shoppingCart);
-
-        // Gå tillbaka till en annan sida eller svara med ett meddelande
-        response.sendRedirect("log-in.jsp");
+        for (String element : shoppingCart) {
+            System.out.println(element);
+        }
+        response.sendRedirect("items.jsp");
     }
+
 }
