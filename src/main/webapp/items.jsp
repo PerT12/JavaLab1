@@ -29,11 +29,5 @@ Price: <%= item.getPrice() %> USD<br>
 <%
     }
 %>
-<%
-    List<String> shoppingCart = (List<String>) session.getAttribute("cart");
-    for (String element : shoppingCart) {
-        out.println(element +"\n");
-    }
-%>
 </body>
 </html>
