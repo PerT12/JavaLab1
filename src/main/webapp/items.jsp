@@ -6,9 +6,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>DB Test</title>
+    <title>Products</title>
 </head>
 <body>
+<a href="cart.jsp">View shopping cart</a><br><br>
 <%
     Collection<ItemInfo> items = ItemHandler.getItems();
     Iterator<ItemInfo> it = items.iterator();
