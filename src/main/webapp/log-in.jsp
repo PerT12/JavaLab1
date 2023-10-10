@@ -5,7 +5,7 @@
     <title>Log in</title>
 </head>
 <body>
-<form action="index.jsp">
+<form action="Servlet" method="GET">
     Username : <input type="text" name="username" />
     <br/><br/>
     Password : <input type="text" name="password" />
