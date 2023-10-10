@@ -8,6 +8,7 @@
 </head>
 <body>
 <%
+
     List<ItemInfo> shoppingCart = (List<ItemInfo>) session.getAttribute("cart");
     Iterator<ItemInfo> it = shoppingCart.iterator();
     while (it.hasNext()) {
@@ -19,6 +20,7 @@ Item description: <%= item.getDescription() %><br>
 Price: <%= item.getPrice() %> USD<br>
 
 <%
+
     }
 %>
 </body>
