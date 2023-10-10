@@ -22,9 +22,10 @@ Item description: <%= item.getDescription() %><br>
 Price: <%= item.getPrice() %> USD<br>
 
 <form action="Servlet" method="POST">
-        <input type="hidden" name="itemId" placeholder="<%= item.getId() %>">
-        <input type="hidden" name="itemName" placeholder="<%= item.getName() %>">
-        <input type="hidden" name="itemPrice" placeholder="<%= item.getPrice() %>">
+    <input type="hidden" name="itemId" value="<%= item.getId() %>">
+    <input type="hidden" name="itemName" value="<%= item.getName() %>">
+    <input type="hidden" name="itemDescription" value="<%= item.getDescription() %>">
+    <input type="hidden" name="itemPrice" value="<%= item.getPrice() %>">
     <button type="submit">Add to shopping cart</button>
 </form>
 
