@@ -13,7 +13,8 @@ public class Servlet extends HttpServlet {
         String idString = request.getParameter("itemId");
         String nameString = request.getParameter("itemName");
         String priceString = request.getParameter("itemPrice");
-        System.out.println( idString +" " + nameString + " " + priceString);
+        System.out.println( idString +" her ska de va" + nameString + " " + priceString);
+        int iD = Integer.parseInt(request.getParameter("itemId"));
 
 
         List<ItemInfo> shoppingCart = (List<ItemInfo>) session.getAttribute("cart");
