@@ -28,7 +28,7 @@ public class UserDB {
 
     public static void addUser(String username, String password) {
         try {Connection con = DBManager.getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO itemsdb.user (username, password) VALUES (?, ?)");
+             PreparedStatement ps = con.prepareStatement("INSERT INTO itemsdb.user (name, password) VALUES (?, ?)");
             ps.setString(1, username);
             ps.setString(2, password);
             ps.executeUpdate();
