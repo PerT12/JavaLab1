@@ -19,7 +19,6 @@ Id: <%= item.getId() %><br>
 Item name: <%= item.getName() %><br>
 Item description: <%= item.getDescription() %><br>
 Price: <%= item.getPrice() %> USD<br>
-
 <form action="Servlet" method="POST">
     <input type="hidden" name="itemId" value="<%= item.getId() %>">
     <input type="hidden" name="itemName" value="<%= item.getName() %>">
@@ -27,7 +26,6 @@ Price: <%= item.getPrice() %> USD<br>
     <input type="hidden" name="itemPrice" value="<%= item.getPrice() %>">
     <button type="submit">Add to shopping cart</button>
 </form>
-
 <%
     }
 %>

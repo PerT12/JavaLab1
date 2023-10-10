@@ -6,9 +6,6 @@
     <title>DB Test</title>
 </head>
 <body>
-<h1><%= "SQL Database" %>
-    <a href="items.jsp">DB</a>
-</h1>
 Welcome ${param.username}
 <%
     String message = (String) request.getAttribute("message");
@@ -17,8 +14,6 @@ Welcome ${param.username}
 <%
     UserHandler.logIn(request.getParameter("username"), request.getParameter("password"));
 %>
-
-<br/>
-<a href="servlet">Servlet</a>
+<a href="items.jsp">View products</a>
 </body>
 </html>
