@@ -2,7 +2,6 @@
 <%@ page import="ui.ItemInfo" %>
 <%@ page import="bo.ItemHandler" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,9 +21,12 @@ Item description: <%= item.getDescription() %><br>
 Price: <%= item.getPrice() %> USD<br>
 
 <form action="Servlet" method="POST">
-        <input type="hidden" name="itemId" value="<%= item.getId() %>">
-        <input type="hidden" name="itemName" value="<%= item.getName() %>">
-        <input type="hidden" name="itemPrice" value="<%= item.getPrice() %>">
+
+    <input type="hidden" name="itemId" value="<%= item.getId() %>">
+    <input type="hidden" name="itemName" value="<%= item.getName() %>">
+    <input type="hidden" name="itemDescription" value="<%= item.getDescription() %>">
+    <input type="hidden" name="itemPrice" value="<%= item.getPrice() %>">
+
     <button type="submit">Add to shopping cart</button>
 </form>
 
