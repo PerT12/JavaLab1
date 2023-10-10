@@ -7,17 +7,20 @@ public class UserDB {
     public static User searchUser(String username, String password) {
         try {
             Connection con = DBManager.getConnection();
-            PreparedStatement ps = con.prepareStatement("SELECT * FROM itemsdb.user WHERE username = ? AND password = ?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM itemsdb.user WHERE name = ? AND password = ?");
             ps.setString(1, username);
             ps.setString(2, password);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    String name = rs.getString("username");
+                    String name = rs.getString("name");
                     String pass = rs.getString("password");
-                    String info = rs.getString("info");
-                    User user = new User(name, pass, info);
-                    System.out.println(name);
+                    User user = new User(name, pass, "");
+                    System.out.println("Existing user " +name);
                     return user;
+                }else {
+                    addUser(username,password);
+                    System.out.println("New user " + username);
+                    return new User(username, password, "");
                 }
             }
         } catch (SQLException e) {
