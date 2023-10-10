@@ -8,7 +8,8 @@
 <%
     List<String> shoppingCart = (List<String>) session.getAttribute("cart");
     for (String element : shoppingCart) {
-        out.println(element +"\n");
+        out.println(element);
+        out.println("<br>");
     }
 %>
 </body>
